@@ -25,7 +25,7 @@ SECRET_KEY = '@0hm6(5506-@jg35j*&tit9t=u7on*h-pf)bwz3i_0u^5ro--0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moy-rebenok.site','www.moy-rebenok.site']
 
 
 # Application definition
@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'accord.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u1302751_default',
+        'USER': 'u1302751_default',
+        'PASSWORD': '2!MXgs6x',
+        'HOST': 'localhost',
     }
 }
 
@@ -119,6 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT='static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',    
