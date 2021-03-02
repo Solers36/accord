@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@0hm6(5506-@jg35j*&tit9t=u7on*h-pf)bwz3i_0u^5ro--0'
+SECRET_KEY = 'dfh5768sfgjus578573azhgfjk7974547dztjxgd678'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['moy-rebenok.site','www.moy-rebenok.site']
+ALLOWED_HOSTS = ['127.0.0.1', 'moy-rebenok.site', 'www.moy-rebenok.site']
 
 
 # Application definition
@@ -76,11 +76,13 @@ WSGI_APPLICATION = 'accord.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'u1302751_default',
-        'USER': 'u1302751_default',
-        'PASSWORD': '2!MXgs6x',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'u1302751_default',
+        # 'USER': 'u1302751_default',
+        # 'PASSWORD': '2!MXgs6x',
+        # 'HOST': 'localhost',
     }
 }
 
