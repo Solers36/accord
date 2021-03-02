@@ -5,8 +5,8 @@ body {
 aside {
     float: left;
     background: #223347;
-    width: 20%;
-    padding: 2.5%;
+    width: 19.7%;
+    padding: 2%;
     height:100vh;
     color: #fff;
     border-right: 5px solid #6378ab;
@@ -48,10 +48,18 @@ aside ul li:hover, aside ul a:hover {
 }
 
 main {
+    padding-bottom: 5px;
     color: black;
     text-align: center;
+    float: right;
+    width: 80%;
 }
 
 main div.text_block {
-    background-color: cornsilk;
+    padding: 2.5%;
+    margin-left: 20%;
+    width: 60%;
+    text-align: left;
+    background: cornsilk;
+    border-radius: 15px;
 }
