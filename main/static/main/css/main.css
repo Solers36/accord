@@ -48,7 +48,7 @@ aside ul li:hover, aside ul a:hover {
 }
 
 main {
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     color: black;
     text-align: center;
     float: right;
@@ -62,4 +62,8 @@ main div.text_block {
     text-align: left;
     background: cornsilk;
     border-radius: 15px;
+}
+
+div.yt_video {
+    padding-top: 2.5%;
 }
