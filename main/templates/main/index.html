@@ -1,92 +1,20 @@
+{%extends 'main/layout.html'%}
 {%load static%}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width"> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css"></link>
-    <link rel="stylesheet" href="{% static 'main/css/main.css'%}"></link>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"></link>
-    <link rel="shortcut icon" href="{% static 'main/img/icon.png' %}" type="image/png">
-    <title>Accord</title>
-</head>
-<body>
-    <aside>
-        <div class='container'>
-            <img src="{% static 'main/img/logo.png' %}" alt="Accord"> 
-            <span class="logo">Accord</span>
-            <div class='menu'> 
-                <p href="{% url 'home' %}"><i class="fas fa-home"></i> Главная</p>
-                <p href=""><i class="fas fa-id-card"></i> Исполнители</p>
-                <p href=""><i class="fas fa-newspaper"></i> Все песни</p>
-                <p href=""><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить песню</button></p>
-            </div>    
-        </div>
-    </aside>
-    <main>
-        <div class='container'>
-            <div>
-                <h1>ДЖАНГО </h1>
-                <h3>Весной Пригретая</h3>
-            </div>
-            <div class="text_block">
-                <div class="centring_block">
-                    <pre>
-Вступление: 
-Am Dm F E
+{% block title %}{{ title }}{% endblock %}
 
-Am                  Dm
-Сонно по домам, ночь по улицам, 
-F                           E
-Все, что было – снова сбудется… 
-Обожги меня – не задетая, 
-В лунный свет одетая, 
 
-Am              E
-Весной пригретая, 
-F                E  
-Весной пригретая… 
-
-    Am      Dm
-Опять вокруг да около 
-    Am              E     
-По крышам греются облака… 
-        Am     Dm
-И звезды жгут за окнами – 
-Am          E      Am
-И ты люби меня просто так! 
-
-Завтра будем мы не замечены 
-Утренним бродягой вечным… 
-Кто любовь дарил – тех нельзя будить! 
-И все, что нам хотелось – 
-Просто быть!
-
-Am                   Dm
-Сколько теплых дней 
-F                  E
-Все летаю где-то я
-Am                Dm
-Снова – не к тебе,  
-F                  E   Am
-В лунный свет одетая… 
-
-Опять вокруг да около
-По крышам греются облака…
-И звезды жгут за окнами –
-И ты люби меня просто так!
-И ты люби меня – просто так…</pre>
-                </div>    
-            </div>
-
-            <div class='yt_video'>
-                <iframe src="https://youtube.com/embed/4UtRjeow3I4?autoplay=1&amp;autohide=1" frameborder="0" allowfullscreen="" style="width: 80%; height: 300px;"></iframe>
-            </div>
-        </div>    
-
-    </main>
-    
-</body>
-</html>
+{% block content %}
+    <div class='container'>
+        {% if song %}
+            {% for el in song %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.artist }}</h3>
+                    <h5>{{ el.song_title }}</h5>
+                    <a href="{% url 'song' el.id %}" class="btn btn-warning">Перейти к содержанию</a>
+                </div>
+            {% endfor %}
+            {% else %}
+                <p>У вас нет записей</p>
+        {% endif %}
+    </div>    
+{% endblock %}
