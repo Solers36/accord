@@ -18,10 +18,10 @@
             <img src="{% static 'main/img/logo.png' %}" alt="Accord"> 
             <span class="logo">Accord</span>
             <div class='menu'> 
-                <p href=""><button class="btn btn-link"><i class="fas fa-home"></i><p>Главная</p></button></p>
-                <p href=""><button class="btn btn-link"><i class="fas fa-id-card"></i><p>Исполнители</p></button></p>
-                <p href=""><button class="btn btn-link"><i class="fas fa-newspaper"></i><p>Все песни</p></button></p>
-                <p href="" id="add_a_song"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить песню</button></p>
+                <a href="{% url 'home' %}"><button class="btn btn-link"><i class="fas fa-home"></i><p>Главная</p></button></a>
+                <a href=""><button class="btn btn-link"><i class="fas fa-id-card"></i><p>Исполнители</p></button></a>
+                <a href="{% url 'home' %}"><button class="btn btn-link"><i class="fas fa-newspaper"></i><p>Все песни</p></button></a>
+                <a href="" id="add_a_song"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить песню</button></a>
             </div>    
         </div>
     </aside>
