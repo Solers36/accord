@@ -11,3 +11,6 @@ class NewsDetailView(DetailView):
     model = Accord
     template_name = 'main/song.html'
     context_object_name = 'song'
+
+def adding(request):
+    return render(request, "main/adding.html")

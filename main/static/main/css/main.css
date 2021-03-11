@@ -60,6 +60,7 @@ main {
     text-align: center;
     float: right;
     width: 100%;
+    margin-top: 1vh;
 }
 
 h1 {font-size: calc(12px + 20 * ((100vw - 320px) / (1200 - 320)));}
@@ -83,6 +84,10 @@ pre {
     font-size: calc(8px + 10 * ((100vw - 320px) / (1200 - 320)));
     text-align: left;
     }
+
+.centring_block form div {
+    margin-bottom: 2vh;
+}
 
 .yt_video {
     padding-top: 2.5%;

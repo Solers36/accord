@@ -1,0 +1,36 @@
+{%extends 'main/layout.html'%}
+{%load static%}
+{% block title %}Добавление произведения{% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <div class="text_block">
+            <div class="centring_block">
+                <form action="#" method="post">
+                    <div>
+                        <span>Исполнитель: </span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>Название произведения: </span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p>Аккорды и текст: </p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p>Используемые аккорды: </p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>Ссылка на видео: </span>
+                        <input type="text">
+                    </div>
+                    <button type="submit" class="btn btn-success">Сохранить</button>
+                    <button type="reset" class="btn btn-warning">Очистить</button>
+                </form>
+            </div>
+        </div>
+    </div>    
+{% endblock %}
