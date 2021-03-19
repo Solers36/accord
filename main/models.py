@@ -1,10 +1,10 @@
 from django.db import models
 
 class Accord(models.Model):
-    artist = models.CharField("Исполнитель", max_length=50, default="Неизвестный исполнитель")
-    song_title = models.CharField("Название произведения", max_length=150, default="Неизвестное название")
+    artist = models.CharField("Исполнитель", max_length=50)
+    song_title = models.CharField("Название произведения", max_length=150)
     song_text = models.TextField("Аккорды и текст")
-    сhords_used =models.CharField("Используемые аккорды", max_length=250, default="Необязательное поле")
+    сhords_used =models.CharField("Используемые аккорды", max_length=250)
     link_to_the_video = models.CharField("Ссылка на видео", max_length=250)
 
     class Meta:

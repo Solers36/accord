@@ -8,6 +8,15 @@
             <h1>{{ song.artist }}</h1>
             <h3>{{ song.song_title }}</h3>
         </div>
+        <div class="b-scroll hidden-phone-portrait1">
+            <button class="btn btn-primary btn-xs g-round" onclick="autoskrl(-1);">
+                <i class="fa fa-minus"></i>
+            </button>
+            <span id="v_skroll_text" onclick="autoskrl(-speed);" class="">Прокрутка</span>
+            <span id="v_skroll"></span>
+            <button class="btn btn-primary btn-xs g-round" onclick="autoskrl(1);"><i class="fa fa-plus"></i>
+            </button>
+        </div>
         <div class="text_block">
             <div class="centring_block">
                 <pre>{{ song.song_text }}</pre>
@@ -19,3 +28,7 @@
         </div>
     </div>    
 {% endblock %}
+
+
+<div class="b-scroll hidden-phone-portrait1"><button class="btn btn-primary btn-xs g-round" onclick="autoskrl(-1);"><i class="fa fa-minus"></i></button><span id="v_skroll_text" onclick="autoskrl(-speed);" class="i-scroll-stop g-link g-link_blue">Стоп</span><span id="v_skroll">1</span><button class="btn btn-primary btn-xs g-round" onclick="autoskrl(1);"><i class="fa fa-plus"></i></button></div>
+<div class="b-scroll hidden-phone-portrait1"><button class="btn btn-primary btn-xs g-round" onclick="autoskrl(-1);"><i class="fa fa-minus"></i></button><span id="v_skroll_text" onclick="autoskrl(-speed);" class="">Прокрутка</span>                           <span id="v_skroll"></span><button class="btn btn-primary btn-xs g-round" onclick="autoskrl(1);"><i class="fa fa-plus"></i></button></div>

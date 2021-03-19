@@ -1,6 +1,4 @@
-body {
-    background: #164f62;
-}
+body {background: #164f62;}
 
 aside {
     background: #223347;
@@ -9,7 +7,7 @@ aside {
     color: #fff;
     border-bottom: 5px solid #6378ab;  
     position: relative; 
-    padding: 0px ; 
+    padding: 0px; 
 }
 
 aside img {
@@ -36,7 +34,7 @@ aside .menu p {
 
 #add_a_song {
     font-size: 2vh;
-    padding: .5vh;
+    padding: 0.5vh;
     margin: 1vh;
 }
 
@@ -66,9 +64,9 @@ h1 {font-size: calc(12px + 20 * ((100vw - 320px) / (1200 - 320)));}
 
 h3 {font-size: calc(8px + 11 * ((100vw - 320px) / (1200 - 320)));}
 
-pre {
-    margin: 0px;
-}
+pre {margin: 0px;}
+
+.form-control {margin-bottom: 3vh;}
 
 .text_block {
     margin: 0px auto;
@@ -84,9 +82,7 @@ pre {
     text-align: left;
     }
 
-.centring_block form div {
-    margin-bottom: 2vh;
-}
+.centring_block form div {margin-bottom: 2vh;}
 
 .yt_video {
     padding-top: 2.5%;
@@ -100,18 +96,12 @@ pre {
 }
 
 @media (max-width:1200px){
-    .container{
-        max-width: 970px;
-    }
+    .container{max-width: 970px;}
 }
 
 @media (max-width:992px){
-    .container{
-        max-width: 750px;
-    }
-    aside .menu { 
-       padding-top: 1vh;
-    }
+    .container{max-width: 750px;}
+    aside .menu {padding-top: 1vh;}
     aside .menu a button p {font-size: calc(10px + 8 * ((100vw - 320px) / (1200 - 320)));}
 }
 
@@ -134,8 +124,10 @@ pre {
     }
     aside .menu a button {padding: 0.4vh 0.8vh; font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
     aside .menu a button p {font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
+    .form-control {margin-bottom: 0.5vh;}
     .text_block {
         margin: 0px auto;
+        margin-bottom: 8vh;
         width: 90%;
         background: cornsilk;
         border-radius: 15px;
@@ -144,5 +136,9 @@ pre {
         font-size: calc(11px + 15 * ((100vw - 320px) / (1200 - 320)));
         font-weight: bold;
     }
-    .yt_video {padding-bottom: 5vh;}
+    .yt_video {
+        margin-bottom: 5vh;
+        margin-top: -5vh;
+    }
     #add_a_song {margin: 0.5vh;}
+}
