@@ -7,11 +7,10 @@
     <div class='container'>
         {% if song %}
             {% for el in song %}
-                <div class="alert alert-warning">
+                <div class="song_element">
                     <p>
-                        <span>{{ el.artist }}</span> - <span>{{ el.song_title }}</span>
+                        <a>{{ el.artist }}</a> - <a href="{% url 'song' el.id %}">{{ el.song_title }}</a>
                     </p>
-                    <a href="{% url 'song' el.id %}" class="btn btn-warning">Перейти к содержанию</a>
                 </div>
             {% endfor %}
             {% else %}

@@ -1,12 +1,13 @@
-body {background: #164f62;}
+body {background: #ffffff;}
 
 aside {
-    background: #223347;
+    background: #ffffff;
     width: 100%;
     height: 7vh;
-    color: #fff;
+    color: #3eaae7;
     border-bottom: 5px solid #6378ab;  
-    position: relative; 
+    margin-bottom: 15px;
+    position: fixed; 
     padding: 0px; 
 }
 
@@ -60,19 +61,26 @@ main {
     margin-top: 1vh;
 }
 
-h1 {font-size: calc(12px + 20 * ((100vw - 320px) / (1200 - 320)));}
+h1 {
+    padding-top: 10px;
+    font-size: calc(12px + 20 * ((100vw - 320px) / (1200 - 320)));
+}
 
 h3 {font-size: calc(8px + 11 * ((100vw - 320px) / (1200 - 320)));}
 
 pre {margin: 0px;}
+
+div .song_element {
+    margin: 21px;
+    text-align: left;
+}
 
 .form-control {margin-bottom: 3vh;}
 
 .text_block {
     margin: 0px auto;
     width: 80%;
-    background: cornsilk;
-    border-radius: 15px;
+    text-align: left;
 }
 
 .centring_block {
@@ -89,26 +97,35 @@ pre {margin: 0px;}
     margin: 0px auto;
 }
 
+.btn-info {
+    background-image: linear-gradient(#9ed2f3, #3eaae7 50%, #9ed2f3);
+    background-color: #6477ab;
+    border-color: #6477ab;
+}
+
 .container {
     max-width: 1200px;
     margin: 0px auto;
-    padding: 0px 5px;
+    padding: 0px 5px 10px;
 }
+
+main .container {padding-top: 50px;}
 
 @media (max-width:1200px){
     .container{max-width: 970px;}
 }
 
 @media (max-width:992px){
-    .container{max-width: 750px;}
+    main .container{max-width: 750px;}
     aside .menu {padding-top: 1vh;}
     aside .menu a button p {font-size: calc(10px + 8 * ((100vw - 320px) / (1200 - 320)));}
+    h1 {padding-top: 40px;}
 }
 
 @media (max-width:767px){
     .container{
         max-width: none;
-        padding: 0px;
+        padding: 0px 0px 50px;
     }
     aside .menu {
         display: flex;
@@ -124,12 +141,12 @@ pre {margin: 0px;}
     }
     aside .menu a button {padding: 0.4vh 0.8vh; font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
     aside .menu a button p {font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
+    h1 {padding-top: 20px;}
     .form-control {margin-bottom: 0.5vh;}
     .text_block {
         margin: 0px auto;
         margin-bottom: 8vh;
         width: 90%;
-        background: cornsilk;
         border-radius: 15px;
     }
     .centring_block {
