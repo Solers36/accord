@@ -8,11 +8,11 @@
             <div class="centring_block">
                 <form method="post">
                     {% csrf_token %}
-                    {{ form.artist }} 
-                    {{ form.song_title }}
-                    {{ form.song_text }}
-                    {{ form.сhords_used }}
-                    {{ form.link_to_the_video }}
+                    {{ form_artist.artist_name }} 
+                    {{ form_accord.song_title }}
+                    {{ form_accord.song_text }}
+                    {{ form_accord.сhords_used }}
+                    {{ form_accord.link_to_the_video }}
                     <span>{{ error }}</span>
                     <button type="reset" class="btn btn-warning">Очистить</button>
                     <button type="submit" class="btn btn-success">Сохранить</button>

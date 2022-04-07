@@ -2,3 +2,4 @@ __pycache__
 static
 migrations
 settings.py
+parser_for_AmDm_to_sqlite.py
