@@ -9,7 +9,7 @@
             {% for el in all_artist %}
                 <div class="song_element">
                     <p>
-                        <a href="{% url 'all_songs_artist' el.url_name %}">{{ el.artist_name }}</a>
+                        <a href="{% url 'all_songs_artist' el.id %}">{{ el.artist_name }}</a>
                     </p>
                 </div>
             {% endfor %}

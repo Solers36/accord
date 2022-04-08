@@ -10,6 +10,7 @@ def index(request):
 
 class SongDetailView(DetailView):
     model = Accord
+    pk_url_kwarg = 'pk_song'
     template_name = 'main/song.html'
     context_object_name = 'song'
 
@@ -33,10 +34,10 @@ def adding(request):
     return render(request, "main/adding.html", data)
 
 
-def all_songs_artist(request, artist):
-    item_artist = Artist.objects.get(url_name=artist)
+def all_songs_artist(request, pk_artist):
+    item_artist = Artist.objects.get(id=pk_artist)
     songs = get_list_or_404(Accord, artist_id=item_artist)
-    return render(request, "main/all_songs_artist.html", {'songs': songs, 'item_artist': item_artist, 'title': artist})
+    return render(request, "main/all_songs_artist.html", {'songs': songs, 'item_artist': item_artist, 'title': item_artist})
 
 
 def artists(request):
