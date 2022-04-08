@@ -3,6 +3,7 @@ from django.db import models
 
 class Artist(models.Model):
     artist_name = models.CharField("Исполнитель", max_length=50)
+    url_name = models.CharField("Адрес", max_length=50)
 
     class Meta:
         verbose_name = "Артист"

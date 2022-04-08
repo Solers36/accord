@@ -34,7 +34,7 @@ def adding(request):
 
 
 def all_songs_artist(request, artist):
-    item_artist = Artist.objects.get(artist_name=artist)
+    item_artist = Artist.objects.get(url_name=artist)
     songs = get_list_or_404(Accord, artist_id=item_artist)
     return render(request, "main/all_songs_artist.html", {'songs': songs, 'item_artist': item_artist, 'title': artist})
 
