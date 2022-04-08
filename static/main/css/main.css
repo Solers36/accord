@@ -1,0 +1,137 @@
+body {background: #164f62;}
+
+aside {
+    background: #223347;
+    width: 100%;
+    height: 7vh;
+    color: #fff;
+    border-bottom: 5px solid #6378ab;  
+    position: relative; 
+    padding: 0px; 
+}
+
+aside img {
+    width: 7vh;
+    float: left;
+}
+
+aside .logo {
+    font-size: 5vh;
+    margin-left: 2%;
+    font-weight: bold;
+    position: relative;
+}
+
+aside .menu {
+    display: flex;
+    float: right;
+    font-size: 2vh;
+}
+
+aside .menu p {
+    margin: 0.5vh 1.5vh;
+}
+
+#add_a_song {
+    font-size: 2vh;
+    padding: 0.5vh;
+    margin: 1vh;
+}
+
+aside .menu a button p {
+    padding: 0vh;
+    margin: 0px;
+    font-size: 2vh;
+}
+
+aside p:hover {
+    color: #ed5959;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: transform .6s ease;
+}
+
+main {
+    padding-bottom: 15px;
+    color: black;
+    text-align: center;
+    float: right;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+h1 {font-size: calc(12px + 20 * ((100vw - 320px) / (1200 - 320)));}
+
+h3 {font-size: calc(8px + 11 * ((100vw - 320px) / (1200 - 320)));}
+
+pre {margin: 0px;}
+
+.text_block {
+    margin: 0px auto;
+    width: 80%;
+    background: cornsilk;
+    border-radius: 15px;
+}
+
+.centring_block {
+    margin: 15px 0px;
+    display: inline-block;
+    font-size: calc(8px + 10 * ((100vw - 320px) / (1200 - 320)));
+    text-align: left;
+    }
+
+.centring_block form div {margin-bottom: 2vh;}
+
+.yt_video {
+    padding-top: 2.5%;
+    margin: 0px auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 5px;
+}
+
+@media (max-width:1200px){
+    .container{max-width: 970px;}
+}
+
+@media (max-width:992px){
+    .container{max-width: 750px;}
+    aside .menu {padding-top: 1vh;}
+    aside .menu a button p {font-size: calc(10px + 8 * ((100vw - 320px) / (1200 - 320)));}
+}
+
+@media (max-width:767px){
+    .container{
+        max-width: none;
+        padding: 0px;
+    }
+    aside .menu {
+        display: flex;
+        position: fixed;
+        justify-content: space-around;
+        width: 100%;
+        height: 7vh;
+        z-index: 100;
+        background: #223347;
+        left: 0;
+        bottom: 0;  
+        padding-top: 0.5vh;      
+    }
+    aside .menu a button {padding: 0.4vh 0.8vh; font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
+    aside .menu a button p {font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
+    .text_block {
+        margin: 0px auto;
+        width: 90%;
+        background: cornsilk;
+        border-radius: 15px;
+    }
+    .centring_block {
+        font-size: calc(11px + 15 * ((100vw - 320px) / (1200 - 320)));
+        font-weight: bold;
+    }
+    .yt_video {padding-bottom: 5vh;}
+    #add_a_song {margin: 0.5vh;}
+}
