@@ -1,35 +1,34 @@
 body {background: #ffffff;}
 
-aside {
+header {
     background: #ffffff;
     width: 100%;
     height: 7vh;
     color: #3eaae7;
     border-bottom: 5px solid #6378ab;  
-    margin-bottom: 15px;
-    position: fixed; 
+    position: sticky; 
     padding: 0px; 
 }
 
-aside img {
+header img {
     width: 7vh;
     float: left;
 }
 
-aside .logo {
+header .logo {
     font-size: 5vh;
     margin-left: 2%;
     font-weight: bold;
     position: relative;
 }
 
-aside .menu {
+header .menu {
     display: flex;
     float: right;
     font-size: 2vh;
 }
 
-aside .menu p {
+header .menu p {
     margin: 0.5vh 1.5vh;
 }
 
@@ -39,13 +38,13 @@ aside .menu p {
     margin: 1vh;
 }
 
-aside .menu a button p {
+header .menu a button p {
     padding: 0vh;
     margin: 0px;
     font-size: 2vh;
 }
 
-aside p:hover {
+header p:hover {
     color: #ed5959;
     text-decoration: none;
     transform: scale(1.05);
@@ -58,7 +57,6 @@ main {
     text-align: center;
     float: right;
     width: 100%;
-    margin-top: 1vh;
 }
 
 h1 {
@@ -109,25 +107,23 @@ div .song_element {
     padding: 0px 5px 10px;
 }
 
-main .container {padding-top: 50px;}
-
 @media (max-width:1200px){
     .container{max-width: 970px;}
 }
 
 @media (max-width:992px){
     main .container{max-width: 750px;}
-    aside .menu {padding-top: 1vh;}
-    aside .menu a button p {font-size: calc(10px + 8 * ((100vw - 320px) / (1200 - 320)));}
+    header .menu {padding-top: 1vh;}
+    header .menu a button p {font-size: calc(10px + 8 * ((100vw - 320px) / (1200 - 320)));}
     h1 {padding-top: 40px;}
 }
 
 @media (max-width:767px){
-    .container{
+    main .container{
         max-width: none;
         padding: 0px 0px 50px;
     }
-    aside .menu {
+    header .menu {
         display: flex;
         position: fixed;
         justify-content: space-around;
@@ -139,8 +135,8 @@ main .container {padding-top: 50px;}
         bottom: 0;  
         padding-top: 0.5vh;      
     }
-    aside .menu a button {padding: 0.4vh 0.8vh; font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
-    aside .menu a button p {font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
+    header .menu a button {padding: 0.4vh 0.8vh; font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
+    header .menu a button p {font-size: calc(11px + 9 * ((100vw - 320px) / (1200 - 320)));}
     h1 {padding-top: 20px;}
     .form-control {margin-bottom: 0.5vh;}
     .text_block {

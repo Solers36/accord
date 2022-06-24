@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+        <link rel="shortcut icon" href="{% static 'main/img/icon.png' %}" type="image/png">
+        <title>{% block title %}{% endblock title %}</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="{% static 'main/img/logo.png' %}" alt="Accord">
+                <span class="logo">Accord</span>
+                <div class="menu">
+                    <a href="{% url 'home' %}">
+                        <button class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Перейти на главную страницу">
+                            <i class="fas fa-home"></i>
+                            <p>
+                                Главная
+                            </p>
+                        </button>
+                    </a>
+                    <a href="{% url 'artists' %}">
+                        <button class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Все исполнители">
+                            <i class="fas fa-id-card"></i>
+                            <p>
+                                Исполнители
+                            </p>
+                        </button>
+                    </a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'account_logout' %}?next={{request.path}}">
+                        <button class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="{{ user.username}}">
+                            <i class="fa-solid fa-user"></i>
+                            <p>
+                                Выйти
+                            </p>
+                        </button>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'account_login' %}?next={{request.path}}">
+                        <button class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Войти или зарегистрироваться">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>
+                                Войти
+                            </p>
+                        </button>
+                    </a>
+                    {% endif %}
+                    <a href="{% url 'adding' %}" id="add_a_song">
+                        <button class="btn btn-info">
+                            <i class="fas fa-plus-circle"></i> Добавить песню
+                        </button>
+                    </a>
+                </div>
+            </div>     
+        </header>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </body>
+</html>

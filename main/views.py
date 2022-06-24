@@ -1,19 +1,27 @@
 from django.shortcuts import get_list_or_404, render, redirect
+from django.contrib.auth.decorators import login_required
+from django.views.generic import DetailView, ListView
 from .models import Accord, Artist
 from .forms import AccordForm, ArtistForm
-from django.views.generic import DetailView
 
 
-def index(request):
-    song = Accord.objects.all()
-    return render(request, "main/index.html", {'song': song, "title": "Accord"})
+class SongListView(ListView):
+    model = Accord
+    paginate_by = 50
+    context_object_name = 'song'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = "Accord"
+        return context
+
 
 class SongDetailView(DetailView):
     model = Accord
     pk_url_kwarg = 'pk_song'
-    template_name = 'main/song.html'
     context_object_name = 'song'
 
+@login_required
 def adding(request):
     error = ""
     if request.method == 'POST':
@@ -37,7 +45,7 @@ def adding(request):
 def all_songs_artist(request, pk_artist):
     item_artist = Artist.objects.get(id=pk_artist)
     songs = get_list_or_404(Accord, artist_id=item_artist)
-    return render(request, "main/all_songs_artist.html", {'songs': songs, 'item_artist': item_artist, 'title': item_artist})
+    return render(request, "main/all_songs_artist.html", {'songs': songs, 'item_artist': item_artist, 'title': item_artist})# TODO title
 
 
 def artists(request):
