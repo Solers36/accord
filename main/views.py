@@ -7,7 +7,7 @@ from .forms import AccordForm, ArtistForm
 
 class SongListView(ListView):
     model = Accord
-    paginate_by = 50
+    paginate_by = 20
     context_object_name = 'song'
     
     def get_context_data(self, **kwargs):
